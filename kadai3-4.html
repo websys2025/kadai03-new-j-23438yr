@@ -31,7 +31,7 @@
 
             // 商品購入の関数
             function buyItem(no) {
-                if(0<no&&no<9){
+                if(0<no&&no<items.length)){
                     console.log("商品番号："+items[no-1]["id"]+", 商品名："+items[no-1]["name"]+"を購入します。");
                     if(0<items[no-1]["stock"]){ 
                         items[no-1]["stock"]=items[no-1]["stock"]-1;
@@ -41,7 +41,7 @@
                     }
                 }
                 else{
-                    console.log("9は無効な商品番号です。番号は1～8で指定してください。");
+                    console.log(no+"は無効な商品番号です。番号は1～8で指定してください。");
                 }// ここにコードを書く
                 showItemList(); // 商品一覧の表示関数呼び出し
             }
